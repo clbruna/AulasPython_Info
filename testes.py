@@ -1,3 +1,4 @@
+"""
 #nome = input("Digite o seu nome: ")
 #idade = int(input("Digite a sua idade"))
 
@@ -50,4 +51,23 @@ if str.isdigit(decimal.replace(".","")) or str.isdigit(decimal.replace(",","")) 
  print("depois ",decimal)
  print(type(decimal))
 else:
- print(type(decimal))
+ print(type(decimal))"""
+
+usuarios = list()
+
+while True:
+
+ nome = input("Digite o seu nome:")
+ senha = input("Digite sua senha:")
+
+ usuario = {"nome": nome, "senha": senha}
+ usuarios.append(usuario)
+
+ resposta = input("Deseja cadastrar um novo usuário? (digite sim ou não) ").strip()[0].lower()
+
+ print(resposta)
+
+ if resposta == "n":
+  break
+
+print(usuarios)
