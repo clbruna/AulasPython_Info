@@ -51,7 +51,7 @@ if str.isdigit(decimal.replace(".","")) or str.isdigit(decimal.replace(",","")) 
  print("depois ",decimal)
  print(type(decimal))
 else:
- print(type(decimal))"""
+ print(type(decimal))
 
 usuarios = list()
 
@@ -70,4 +70,15 @@ while True:
  if resposta == "n":
   break
 
-print(usuarios)
+print(usuarios)"""
+
+
+
+# Sistema que não permite logins repetidos
+
+cadastro_logins = set()
+usuarios = list()
+
+while True:
+
+
