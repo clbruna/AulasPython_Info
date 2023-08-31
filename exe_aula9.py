@@ -43,21 +43,26 @@ while True:
 
         while True:
 
-            user = input("Login:")
+            login_entrar = input("Login:")
 
-            for user in usuarios:
+            if login_entrar in cadastro_logins:
 
-                print(usuarios[user])
+                senha_entrar = input("Digite sua senha:")
 
-                # else:
+                for index in usuarios:
 
-                # print("Usuário não encontrado")
+                    if senha_entrar == index[1]:
+                        print("Bem vindo!")
+                        break
+
+                    else:
+                        continue
 
 
 
 
-
-
+            else:
+                print("Usuário não encontrado")
 
 
     else:
