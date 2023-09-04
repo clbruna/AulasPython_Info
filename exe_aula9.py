@@ -51,14 +51,12 @@ while True:
 
                 for index in usuarios:
 
-                    if senha_entrar == index[1]:
+                    if senha_entrar == usuarios[index]:
                         print("Bem vindo!")
                         break
 
                     else:
                         continue
-
-
 
 
             else:
