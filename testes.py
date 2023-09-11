@@ -95,4 +95,6 @@ print(idade)
 
 """
 
-print('\033[32m' + 'Isto eh verde' )
+teste = int(input("Teste"))
+
+print(type(teste))
