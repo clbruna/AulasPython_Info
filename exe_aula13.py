@@ -50,7 +50,7 @@ while True:
 
     except ValueError as e:
         print("Digite uma nota válida")
-"""
+
 
 # CÁLCULO DE MÉDIA (COM TRATAMENTO DE ERROS)
 
@@ -74,3 +74,42 @@ while True:
         print("Digite uma nota válida")
 
 print(media)
+"""
+
+pessoas = list()
+
+while True:
+    try:
+        arquivo = open("pessoas.txt", "x")
+
+    except FileExistsError as e:
+        print("O arquivo já existe")
+
+    try:
+        nome = input("Nome:")
+        idade = int(input("Idade:"))
+
+        pessoa = (nome, idade)
+        pessoas.append(pessoa)
+
+    except ValueError as e:
+        print("Digite uma idade válida")
+
+    resposta = input("Deseja cadastra outra pessoa? (sim ou não)").strip()[0].lower()
+
+    if resposta == "n":
+        break
+
+    try:
+        salvar = open("pessoas.txt", "a")
+        salvar.write(pessoa)
+
+    except:
+        print("Erro")
+
+
+
+
+
+print(pessoas)
+
