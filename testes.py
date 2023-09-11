@@ -70,7 +70,7 @@ while True:
  if resposta == "n":
   break
 
-print(usuarios)"""
+print(usuarios)
 
 
 
@@ -82,3 +82,17 @@ usuarios = list()
 while True:
 
 
+
+import datetime
+
+#ano_atual: int = datetime.date.today().year
+#print(ano_atual)
+
+ano_nasc = input("Digite o ano em que nascdeu:")
+
+idade = datetime.date.today().year - int(ano_nasc)
+print(idade)
+
+"""
+
+print('\033[32m' + 'Isto eh verde' )
