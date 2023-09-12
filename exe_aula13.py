@@ -78,12 +78,14 @@ print(media)
 
 pessoas = list()
 
-while True:
-    try:
-        arquivo = open("pessoas.txt", "x")
+try:
+    arquivo = open("pessoas.txt", "x")
 
-    except FileExistsError as e:
-        print("O arquivo já existe")
+except FileExistsError as e:
+    print("O arquivo já existe")
+
+while True:
+    
 
     try:
         nome = input("Nome:")
@@ -106,6 +108,14 @@ while True:
 
     except:
         print("Erro")
+
+    try:
+        arquivoler = open("pessoas.txt", "r")
+
+    except Exception as e:
+        print("Valor:", e)
+    finally:
+        print(arquivoler.read())
 
 
 
